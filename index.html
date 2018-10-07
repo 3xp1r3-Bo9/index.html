@@ -1,0 +1,1117 @@
+
+<html><head></head>
+
+<script language="JavaScript">
+
+//////////F12 disable code////////////////////////
+
+document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            alert(' Error Console Event Canceled , F12 was pressed ');
+            return false;
+        }
+		if ( event.keyCode == 83 ) {
+		alert('Error Saving html page is not allowed')
+		return false;
+		}
+    }
+    
+
+/////////////////////end/////////////////////// <audio source="mp3" src="https://www.youtube.com/watch?v=ppjujQorV4Q" type="audio/mp4" autoplay="autoplay" loop="loop"></audio>
+
+
+//Disable right click script 
+
+var message="Sorry, right-click has been disabled On  my page "; 
+/////////////////////////////////// 
+function clickIE() {if (document.all) {(message);return false;}} 
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) { 
+if (e.which==2||e.which==3) {alert(message);return false;}}} 
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+document.oncontextmenu=new Function("return false") 
+// 
+function disableCtrlKeyCombination(e)
+{
+//list all CTRL + key combinations you want to disable
+var forbiddenKeys = new Array('a', 'n', 'c', 'x', 'v', 'j' , 'w');
+var key;
+var isCtrl;
+if(window.event)
+{
+key = window.event.keyCode;     //IE
+if(window.event.ctrlKey)
+isCtrl = true;
+else
+isCtrl = false;
+}
+else
+{
+key = e.which;     //firefox
+if(e.ctrlKey)
+isCtrl = true;
+else
+isCtrl = false;
+}
+//if ctrl is pressed check if other key is in forbidenKeys array
+if(isCtrl)
+{
+for(i=0; i<forbiddenKeys.length; i++)
+{
+//case-insensitive comparation
+if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase())
+{
+alert('Key combination CTRL + '+String.fromCharCode(key) +' has been disabled.');
+return false;
+}
+}
+}
+return true;
+}
+
+
+/*	
+document.onkeydown = function (e) {
+    e = e || window.event;//Get event
+    if (e.ctrlKey) {
+        var c = e.which || e.keyCode;//Get key code
+        switch (c) {
+		    
+            case 83://Block Ctrl+S
+                e.preventDefault();     
+                e.stopPropagation();
+				alert("Sorry you cannot save it to your PC")
+			
+                
+            break;
+        }
+    }
+};
+*/
+</script>
+
+<body onselectstart="return false" ondragstart="return false" background="http://gubbs.net.nz/Portals/35/giphy.gif" style="background-position:center">
+
+
+
+<embed width="4" height="3"
+src="https://www.youtube.com/embed/bABdo6gwQho?autoplay=1&loop=1&playlist=bABdo6gwQho" wmode="transparent"  loop="loop" >
+
+
+               <script type="text/javascript">
+    (function ( $ ) {
+	
+        $.fn.typewrite = function ( options ) {
+            var settings = {
+                'selector': this,
+                'extra_char': '',
+                'delay':    100,
+                'trim':     false,
+                'callback': null
+            };
+            if (options) $.extend(settings, options);
+     
+            /* This extra closure makes it so each element
+             * matched by the selector runs sequentially, instead
+             * of all at the same time. */
+            function type_next_element(index) {
+                var current_element = $(settings.selector[index]);
+                var final_text = current_element.text();
+                if (settings.trim) final_text = $.trim(final_text);
+                current_element.html("").show();
+     
+                function type_next_character(element, i) {
+                    element.html( final_text.substr(0, i)+settings.extra_char );
+                    if (final_text.length >= i) {
+                        setTimeout(function() {
+                            type_next_character(element, i+1);
+                        }, settings.delay);
+                    }
+                    else {
+                        if (++index < settings.selector.length) {
+                            type_next_element(index);
+                        }
+                        else if (settings.callback) settings.callback();
+                    }
+                }
+                type_next_character(current_element, 0);
+            }
+            type_next_element(0);
+     
+            return this;
+        };
+    })(jQuery);    
+	
+                    </script>
+					
+                    
+                    <script type="text/javascript">
+                            $(document).ready(function(){
+                                    $("#shutdown").animate({'top':'+='+($(document).height()/2)+'px','height':'1px'},500,function(){
+                                    $("#shutdown").fadeOut("fast",function(){
+                                            var ytheight = Math.floor((($(document).width()/2.2)/1.7777))+"px";
+                                            var ytwidth = Math.floor(($(document).width()/2.2))+'px';
+                                           
+                                            $("#youtube iframe").attr("width",ytwidth);    
+                                            $("#youtube iframe").attr("height",ytheight);
+                                            $("#youtube").css("width",ytwidth);
+                                            $("#youtube").css("height",ytheight);                          
+                                            $("#youtube").slideDown();
+                                            printout();
+                                    });});                 
+                            });
+                            function printout()
+                            {
+                                    $('p.next:first').typewrite({
+                                            'delay': 70,
+                                                    'extra_char': '',
+                                            'trim': true,
+                                            'callback': function(){$('p.next:first').removeClass("next");printout();}
+                                            });
+                            }
+                            $(window).resize(function() {
+                                            var ytheight = Math.floor((($(document).width()/2.2)/1.7777))+"px";
+     
+                                            var ytwidth = Math.floor(($(document).width()/2.2))+'px';
+     
+                                           
+     
+                                            $("#youtube iframe").attr("width",ytwidth);    
+     
+                                            $("#youtube iframe").attr("height",ytheight);
+     
+                                            $("#youtube").css("width",ytwidth);
+     
+                                            $("#youtube").css("height",ytheight);
+                            });
+                    </script>
+    </head>
+    <body>
+   <style type="text/css">body {cursor:url("http://i1021.photobucket.com/albums/af334/klemateaux/tumblr-theme/cursor.gif"),default}</style>
+
+
+
+
+<div align="center"><table border="0" width="70%"><tr><td>
+
+
+<h1><font face="Cooper Black"><center><SCRIPT>
+
+
+
+farbbibliothek = new Array();
+
+
+
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+
+
+
+farbbibliothek[1] = new Array("#FF0000","#FFFFFF","#FFFFFF","#FF0000");
+
+
+
+farbbibliothek[2] = new Array("#FFFFFF","#FF0000","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF");
+
+
+
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+
+
+
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+
+
+farbbibliothek[5] = new Array("#FF0000","#FF0000","#FF0000","#FFFFFF","#FFFFFF","#FFFFFF");
+
+
+farbbibliothek[6] = new Array("#FF0000","#FDF5E6");
+
+
+
+farben = farbbibliothek[4];
+
+
+
+function farbschrift()
+
+
+
+{
+
+
+
+for(var i=0 ; i<Buchstabe.length; i++)
+
+
+
+{
+
+
+
+document.all["a"+i].style.color=farben[i];
+
+
+
+}
+
+
+
+farbverlauf();
+
+
+
+}
+
+
+
+function string2array(text)
+
+
+
+{
+
+
+
+Buchstabe = new Array();
+
+
+
+while(farben.length<text.length)
+
+
+
+{
+
+
+
+farben = farben.concat(farben);
+
+
+
+}
+
+
+
+k=0;
+
+
+
+while(k<=text.length)
+
+
+
+{
+
+
+
+Buchstabe[k] = text.charAt(k);
+
+
+
+k++;
+
+
+
+}
+
+
+
+}
+
+
+
+function divserzeugen()
+
+
+
+{
+
+
+
+for(var i=0 ; i<Buchstabe.length; i++)
+
+
+
+{
+
+
+
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>");
+
+
+
+}
+
+
+
+farbschrift();
+
+
+
+}
+
+
+
+var a=1;
+
+
+
+function farbverlauf()
+
+
+
+{
+
+
+
+for(var i=0 ; i<farben.length; i++)
+
+
+
+{
+
+
+
+farben[i-1]=farben[i];
+
+
+
+}
+
+
+
+farben[farben.length-1]=farben[-1];
+
+
+
+
+
+
+
+setTimeout("farbschrift()",30);
+
+
+
+}
+
+
+
+//
+
+
+
+var farbsatz=1;
+
+
+
+function farbtauscher()
+
+
+
+{
+
+
+
+farben = farbbibliothek[farbsatz];
+
+
+
+while(farben.length<text.length)
+
+
+
+{
+
+
+
+farben = farben.concat(farben);
+
+
+
+}
+
+
+
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+
+
+
+}
+
+
+
+setInterval("farbtauscher()",5000);
+
+
+
+text ="TheEamin's Official Landing Page";//h
+
+
+
+string2array(text);
+
+
+
+divserzeugen();
+
+
+
+//document.write(text);
+
+
+
+
+</SCRIPT></center></h1></font>
+
+
+
+
+
+
+
+<style type="text/css">
+                            body
+                            {
+                            background-color:#000000;
+                            background-image:url(http://gubbs.net.nz/Portals/35/giphy.gif);
+							
+                            background-repeat:no-repeat;
+                            background-position:center;
+                            background-attachment:fixed;
+                            #navbar-iframe-#navbar
+                            { display: block; }
+                            }              
+                            div#shutdown
+                            {
+                                    background: white;
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                            }
+                    #frm {
+                   
+                                    font-size: 2em;
+                                    font-weight: bold;
+                                    font-family: Chiller;
+                           
+                                    overflow: hidden;
+     
+                                            }
+            .hidden {
+                    visibility: hidden;
+            }
+                            div.text
+                            {
+                                    padding-top: 40px;
+                                    width: 30%;
+                                    padding: 10px;
+                                    text-shadow: #999 2px 2px 40px;
+                                    background: #000000;
+                                    height: 100%;
+                                    opacity: 0.5;
+                            }
+                            p.text
+                            {
+                                    color: white;
+                                    font-family: sans-serif,Times New Roman, Verdana;
+                                    display: none;
+                                    font-size: 14pt;
+                                    font-weight: bold;
+                            }
+                            div#youtube
+                            {
+                                    position: absolute;
+                                    right: 10px;
+                                    top: 30px;
+                                    width: 30%;
+                                    height: 315px;
+                                    display: none; 
+                                    padding: 20px;
+                                    border-radius: 10px;
+                                    border: 2px solid white;
+                                    opacity: 0.8;
+                                    background: #000000;           
+                            }
+                   
+    .genieland-huge
+    {
+    position:fixed;
+    right:10px;
+    top:60% ;
+    }
+    .genieland-huge img
+    {
+    float:right; clear:right; margin:1px;
+    -webkit-transition: all .0s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    }
+    .genieland-huge img:hover
+    {
+    -moz-transform: scale(1.2) rotate(6deg);
+    -webkit-transform: scale(1.2) rotate(6deg);
+     -o-transform: scale(1.2) rotate(6deg);
+    -ms-transform: scale(1.2) rotate(6deg);
+    transform: scale(1.2) rotate(6deg);
+     }
+    </style>
+   <center> 
+
+<link href="http://fonts.googleapis.com/css?family=Iceland" rel="stylesheet" type="text/css" align="middle">
+
+
+
+<p><img src="https://image.ibb.co/ji1uVG/Black_Squa_D.png" style="   box-shadow: 1px 1px 5px 5px #0099FF ;  border-radius: 20px ; -moz-border-radius: 50px ;   "  align="middle"></p> 
+
+
+
+
+</center>
+<p>
+    <br>
+   
+	
+    <a href="https://www.facebook.com/EaminBlack" target="_blank"><img src="http://findicons.com/files/icons/2045/social_ball/128/facebook.png" alt="facebook" width="95" height="100" style="position:fixed;top:200px;right:10px; border: #000"></a>
+
+    <center><marquee behavior="scroll" direction="left" scrollamount="4" scrolldelay="55" width="100%" style="box-shadow: rgb(0, 153, 255) 1px 1px 5px 5px; z-index: inherit; width: 100%; background: rgb(0, 0, 0);">
+
+<font size="5px" style="font-family: Iceland, sans-serif;color:#0099FF;text-shadow: 0 0 3px red, 0px 0px 5px   #0099FF ">A Super N00B From Bangladesh.</font>
+</marquee><br>
+<br>
+<br>
+
+
+<center>
+<font size = "5px" color = "Green" </font>
+<br>
+This Is TheEamin's Official Landing Page.
+
+</center>
+
+	<script type="text/javascript">
+<!--//
+function tb9_makeArray(n){
+	this.length = n;
+	return this.length;
+}
+tb9_messages = new tb9_makeArray(2);
+tb9_messages[0] = " Code By :TheEamin ";
+tb9_messages[1] = "Happy Hacking Day";
+tb9_rptType = 'infinite';
+tb9_rptNbr = 5;
+tb9_speed = 75;
+tb9_delay = 2000;
+var tb9_counter=1;
+var tb9_currMsg=0;
+var tb9_timerID = null
+var tb9_bannerRunning = false
+var tb9_state = ""
+tb9_clearState()
+function tb9_stopBanner() {	
+	if (tb9_bannerRunning)		
+	clearTimeout(tb9_timerID)	
+	tb9_timerRunning = false
+}
+function tb9_startBanner() {	
+	tb9_stopBanner()	
+	tb9_showBanner()
+}
+function tb9_clearState() {	
+	tb9_state = ""	
+	for (var i = 0; i < tb9_messages[tb9_currMsg].length; ++i) {		
+		tb9_state += "0"	
+	}
+}
+function tb9_showBanner() {	
+if (tb9_getString()) {		
+	tb9_currMsg++		
+	if (tb9_messages.length <= tb9_currMsg)	{		
+		if ((tb9_rptType == 'finite') && (tb9_counter==tb9_rptNbr)){
+			tb9_stopBanner();
+			return;
+		}
+		tb9_counter++;
+		tb9_currMsg=0;
+	}
+	tb9_clearState()		
+	tb9_timerID = setTimeout("tb9_showBanner()", tb9_delay)	
+} 
+else {		
+	var tb9_str = ""		
+for (var j = 0; j < tb9_state.length; ++j) {			
+	tb9_str += (tb9_state.charAt(j) == "1") ? tb9_messages[tb9_currMsg].charAt(j) : "___"		
+}		
+document.title = tb9_str		
+tb9_timerID = setTimeout("tb9_showBanner()", tb9_speed)	
+}
+}
+function tb9_getString() {	
+	var full = true	
+	for (var j = 0; j < tb9_state.length; ++j) {		
+		if (tb9_state.charAt(j) == 0)			
+			full = false	
+		}	
+	if (full) return true	
+	while (1) {		
+		var num = tb9_getRandom(tb9_messages[tb9_currMsg].length)		
+		if (tb9_state.charAt(num) == "0")			
+			break
+	}	
+	tb9_state = tb9_state.substring(0, num) + "1" + tb9_state.substring(num + 1, tb9_state.length)	
+	return false
+}
+function tb9_getRandom(max) {	
+	var now = new Date()		
+	var num = now.getTime() * now.getSeconds() * Math.random()	
+	return num % max
+}
+tb9_startBanner()
+</script>
+	
+
+
+ </br></br></br>
+ </span> 
+    </center>
+
+    
+    <div class="genieland-huge">
+    
+    </div>
+    <div class="text"  size= "16">
+    <script type="text/javascript">
+   
+     
+    var mtx = function () {
+            /* ==== private variables & methods ==== */
+			
+            var stop = false;
+            var frm, lineDelay, charDelay;
+            var colorText, colorMatch, colorGhost, elapsedTime;
+            var lineIndex = 0;
+            var lineChar  = [];
+            var animStack = [];
+            var colorStack = [];
+            /* ==== rgb color ==== */
+            function colorRGB (c) {
+                    return 'rgb('
+                            +Math.round(Math.min(255, Math.max(0, c[0])))+','
+                            +Math.round(Math.min(255, Math.max(0, c[1])))+','
+                            +Math.round(Math.min(255, Math.max(0, c[2])))+')';
+            }
+            /* ==== Easing functions ==== */
+            function Ease () {}
+            Ease.prototype = {
+                    ease : function () {
+                            this.m += this.s;
+                            this.x0 += (this.d * this.m * .0025);
+                            if (this.m == 20) this.s = -1;
+                            return this.x0;
+                    },
+                    init : function (x0, x1) {
+                            this.m = 0;
+                            this.s = 1;
+                            this.d = x1 - x0;
+                            this.x0 = x0;
+                    }
+            }
+     
+            /* ==== Load Lines ==== */
+            function loadLines () {
+                    // read text from HTML form
+                    text = document.forms.mtxform.text.value.split("\n");
+                    // loop through all lines
+                    for (var j = 0; j < text.length; j++) {
+                            var t = text[j];
+                            if (t) {
+                                    var n = t.length;
+                                    lineChar[j] = [];
+                                    // first pass: create characters capture RELATIVE offset coordinates
+                                    for (var i = 0; i < n; i++)
+                                            lineChar[j][i] = new Character(t.charAt(i), j);
+                                    // second pass: convert to absolute position
+                                    for (var i = 0, o; o = lineChar[j][i]; i++) {
+                                            if (o.c == "|") {
+                                                    // remove spaces
+                                                    lineChar[j].splice(i, 1);
+                                                    frm.removeChild(o.o);
+                                                    i--;
+                                            } else {
+                                                    // convert to absolute position and render
+                                                    o.o.style.position = "absolute";
+                                                    o.o.style.color = colorRGB(colorText);
+                                                    o.moveHTML();
+                                                    // push first line in animation stack
+                                                    if (j == 0) pushAnim (o, charDelay * i);
+                                            }
+                                    }
+                            }
+                    }
+            }
+            /* ==== Character Constructor ==== */
+            function Character (c, line) {
+                    if (c == " ") c = "|";
+                    this.c = c;
+                    // create HTML element and append the the container
+                    this.o = document.createElement("span");
+                    this.o.innerHTML = c;
+                    this.o.style.zIndex = 2;
+                    frm.appendChild(this.o);
+                    // capture relative offset positions !
+                    this.x0 = this.o.offsetLeft;
+                    this.y0 = -this.o.offsetHeight * 1.5;
+                    this.x1 = this.x0;
+                    this.x2 = this.x0;
+                    this.y1 = (line + 1) * this.o.offsetHeight;
+                    this.y2 = frm.offsetHeight;
+                    this.mx = new Ease();
+                    this.my = new Ease();
+                    this.c0 = [colorText[0], colorText[1], colorText[2]];
+            }
+            /* ==== Character functions ==== */
+            Character.prototype = {
+                    // ---- character animation ----
+                    anim : function (i) {
+                            // temporization
+                            if (this.delay > 0) {
+                                    if (elapsedTime)
+                                            this.delay -= new Date().getTime() - elapsedTime;
+                            } else {
+                                    // moving
+                                    this.x0 = this.mx.ease();
+                                    this.y0 = this.my.ease();
+                                    this.moveHTML();
+                                    if (!this.my.m && !this.mx.m) {
+                                            // remove from stack
+                                            animStack.splice(i, 1);
+                                            // remove dead characters
+                                            if (this.off) frm.removeChild(this.o);
+                                    }
+                            }
+                    },
+                    // ----- color fading ------
+                    color : function (i) {
+                            this.c0[0] += this.cr[0];
+                            this.c0[1] += this.cr[1];
+                            this.c0[2] += this.cr[2];
+                            this.ci++;
+                            this.o.style.color = colorRGB(this.c0);
+                            if (this.ci >= this.cs)
+                                    colorStack.splice(i, 1);
+                    },
+                    // ----- HTML positioning -----
+                    moveHTML : function () {
+                            this.o.style.left = Math.round(this.x0) + "px";
+                            this.o.style.top  = Math.round(this.y0) + "px";
+                    },
+                    // ----- init color fading ------
+                    colorFade : function (c1, steps) {
+                            this.cs = steps;
+                            this.cr = [(c1[0] - this.c0[0]) / steps, (c1[1] - this.c0[1]) / steps, (c1[2] - this.c0[2]) / steps];
+                            if (this.cr[0] != 0 || this.cr[1] != 0 || this.cr[2] != 0){
+                                    this.ci = 0;
+                                    colorStack.push (this);
+                            }
+                    }
+            }
+            /* ==== push character in the animation stack ==== */
+            function pushAnim (o, delay) {
+                    // init ease
+                    o.mx.init(o.x0, o.x1);
+                    o.my.init(o.y0, o.y1);
+                    o.delay = delay;
+                    // push stack
+                    animStack.push(o);
+            }
+            /* ==== next line ==== */
+            function nextLine () {
+                    if (lineIndex < lineChar.length - 1) {
+                            // display shadow text
+                            for (var i = 0, o; o = lineChar[lineIndex][i]; i++) {
+                                    var s = o.o.cloneNode(true);
+                                    s.style.zIndex = 1;
+                                    s.style.color = colorRGB(colorGhost);
+                                    frm.appendChild(s);
+                            }
+                            // matching next line characters
+                            for (var i = 0, t; t = lineChar[lineIndex + 1][i]; i++) {
+                                    for (var j = 0, o; o = lineChar[lineIndex][j]; j++) {
+                                            if (o.c == t.c) {
+                                                    // colors
+                                                    t.colorFade(colorMatch, o.match ? 1 : 40);
+                                                    t.match = true;
+                                                    // swap characters
+                                                    t.x0 = o.x0;
+                                                    t.y0 = o.y0;
+                                                    t.moveHTML();
+                                                    // remove redundant character
+                                                    frm.removeChild(o.o);
+                                                    lineChar[lineIndex].splice(j, 1);
+                                                    break;
+                                            }
+                                    }
+                            }
+                            // take off redundant characters
+                            for (var i = 0, o; o = lineChar[lineIndex][i]; i++) {
+                                    // set target position (off frame)
+                                    o.y1 = frm.offsetHeight;
+                                    o.off = true;
+                                    o.match = false;
+                                    o.colorFade (colorText, 40);
+                                    // push in animation stack
+                                    pushAnim (o, (lineDelay * .8) + charDelay * i);
+                            }
+                    }
+                    // push next line in animation stack
+                    lineIndex++;
+                    if (lineIndex < lineChar.length) {
+                            for (var i = 0, o; o = lineChar[lineIndex][i]; i++)
+                                    pushAnim (o, lineDelay + charDelay * i);
+                    }
+            }
+     
+            /* ==== main animation loop ==== */
+            function main() {
+                    //  characters
+                    var n = animStack.length;
+                    if (n) {
+                            var i = n;
+                            while (i--)
+                                    animStack[i].anim(i);
+                    } else nextLine ();
+                    // colors
+                    var i = colorStack.length;
+                    while (i--)
+                            colorStack[i].color(i);
+                    // get elapsed time and loop
+                    elapsedTime = new Date().getTime();
+                    setTimeout(main, 16);
+            }
+     
+            /* //////////// ==== public methods ==== //////////// */
+            return {
+                    /* ==== initialize script ==== */
+                    init : function (cont, t1, t2, c1, c2, c3) {
+                            // container
+                            frm = document.getElementById(cont);
+                            lineDelay = t1;
+                            charDelay = t2;
+                            colorText = c1;
+                            colorMatch = c2;
+                            colorGhost = c3;
+                            loadLines();
+                            main();
+                    },
+                    changeText : function () {
+                            document.getElementById("show").className = "";
+                            document.getElementById("inputext").className = "hidden";
+                            lineChar  = [];
+                            animStack = [];
+                            colorStack = [];
+                            frm.innerHTML = "";
+                            lineIndex = 0;
+                            elapsedTime = 0;
+                            loadLines();
+                            frm.focus();
+                    },
+                    show : function () {
+                            document.getElementById("show").className = "hidden";
+                            document.getElementById("inputext").className = "";
+                            document.getElementById("text").focus();
+                    }
+            }
+    }();
+     
+     
+    /* ==== init text ==== */
+    onload = function () {
+     
+    //      mtx.init( el, linesDelay, charsDelay, cText, cMatch, cGhost);
+            mtx.init("frm", 1500, 150, [255,255,255], [255,64,0], [44,44,44]);
+    }
+     
+    </script>
+	<script type="text/javascript">
+    ;(function(){
+    var msg = "TheEamin From Bangladesh.";
+    var size = 18;
+    var circleY = 0.75; var circleX = 2;
+    var letter_spacing = 5;
+    var diameter = 10;
+    var rotation = 0.4;
+    var speed = 0.3;
+     
+    ////////////////////// Stop Editing //////////////////////
+     
+    if (!window.addEventListener && !window.attachEvent || !document.createElement) return;
+     
+    msg = msg.split('');
+    var n = msg.length - 1, a = Math.round(size * diameter * 0.208333), currStep = 20,
+    ymouse = a * circleY + 20, xmouse = a * circleX + 20, y = [], x = [], Y = [], X = [],
+    o = document.createElement('div'), oi = document.createElement('div'),
+    b = document.compatMode && document.compatMode != "BackCompat"? document.documentElement : document.body,
+     
+    mouse = function(e){
+     e = e || window.event;
+     ymouse = !isNaN(e.pageY)? e.pageY : e.clientY; // y-position
+     xmouse = !isNaN(e.pageX)? e.pageX : e.clientX; // x-position
+    },
+     
+    makecircle = function(){ // rotation/positioning
+     if(init.nopy){
+      o.style.top = (b || document.body).scrollTop + 'px';
+      o.style.left = (b || document.body).scrollLeft + 'px';
+     };
+     currStep -= rotation;
+     for (var d, i = n; i > -1; --i){ // makes the circle
+      d = document.getElementById('iemsg' + i).style;
+      d.top = Math.round(y[i] + a * Math.sin((currStep + i) / letter_spacing) * circleY - 15) + 'px';
+      d.left = Math.round(x[i] + a * Math.cos((currStep + i) / letter_spacing) * circleX) + 'px';
+     };
+    },
+     
+    drag = function(){ // makes the resistance
+     y[0] = Y[0] += (ymouse - Y[0]) * speed;
+     x[0] = X[0] += (xmouse - 20 - X[0]) * speed;
+     for (var i = n; i > 0; --i){
+      y[i] = Y[i] += (y[i-1] - Y[i]) * speed;
+      x[i] = X[i] += (x[i-1] - X[i]) * speed;
+     };
+     makecircle();
+    },
+     
+    init = function(){ // appends message divs, & sets initial values for positioning arrays
+     if(!isNaN(window.pageYOffset)){
+      ymouse += window.pageYOffset;
+      xmouse += window.pageXOffset;
+     } else init.nopy = true;
+     for (var d, i = n; i > -1; --i){
+      d = document.createElement('div'); d.id = 'iemsg' + i;
+      d.style.height = d.style.width = a + 'px';
+      d.appendChild(document.createTextNode(msg[i]));
+      oi.appendChild(d); y[i] = x[i] = Y[i] = X[i] = 0;
+     };
+     o.appendChild(oi); document.body.appendChild(o);
+     setInterval(drag, 25);
+    },
+     
+    ascroll = function(){
+     ymouse += window.pageYOffset;
+     xmouse += window.pageXOffset;
+     window.removeEventListener('scroll', ascroll, false);
+    };
+     
+    o.id = 'outerCircleText'; o.style.fontSize = size + 'px';
+     
+    if (window.addEventListener){
+     window.addEventListener('load', init, false);
+     document.addEventListener('mouseover', mouse, false);
+     document.addEventListener('mousemove', mouse, false);
+      if (/Apple/.test(navigator.vendor))
+       window.addEventListener('scroll', ascroll, false);
+    }
+    else if (window.attachEvent){
+     window.attachEvent('onload', init);
+     document.attachEvent('onmousemove', mouse);
+    };
+     
+    })();
+     
+    </script>
+    </head>
+	<body>
+	
+	
+    <body>
+           
+     
+    <div id="frm"></div>
+    <form id="mtxform" name="mtxform">
+    <span id="inputext" class="hidden">
+    <textarea rows="7" cols="20" id="text" name="text">
+#Team Black Squad.
+we from bangladesh.
+Respect Coders.
+</textarea>
+
+
+<link href="http://www.iconj.com/ico/z/p/zpsi90lfc7.ico" rel="icon" type="image/x-icon">
+<link href="http://fonts.googleapis.com/css?family=Iceland" rel="stylesheet" type="text/css">
+
+
+<p></p>
+
+
+
+ 
+
+
+<p>
+<br>
+
+<br>
+
+  
+  
+  
+
+</p><div class="Style1" align="center">
+  
+
+   
+   
+</div>
+
+
+<p></p>
+
+<style type="text/css">
+    /* Circle Text Styles */
+    #outerCircleText {
+    /* Optional - DO NOT SET FONT-SIZE HERE, SET IT IN THE SCRIPT */
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'comic sans ms', verdana, arial;
+    color: #FFF;
+    /* End Optional */
+     
+    /* Start Required - Do Not Edit */
+    position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;}
+    #outerCircleText div {position: relative;}
+    #outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
+    /* End Required */
+    /* End Circle Text Styles */
+    </style>
+
+
+
+<div class="greets">
+<table width="62%" border="0" align="center">
+<tbody><tr>
+<td width="100%" id="greetz">
+
+
+</td>
+</tr></tbody></table>
+
+ </div>
+     
+
+
+
+
+
+
+ 
+<!--This index Created By TheEamin  --- *** Attacker--><p></p>
+<p></p>
+
+
+</body></html>
